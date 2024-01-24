@@ -11,6 +11,9 @@ type Lexer struct {
 	ch           byte //current char under examination
 }
 
+// Makes a new Lexer, which takes a string (which becomes the value of the lexer)
+// and then sets it to the 'l' field as input
+// It then reads a character to se it's field up by one
 func New(input string) *Lexer {
 	l := &Lexer{input: input}
 	l.readChar()
